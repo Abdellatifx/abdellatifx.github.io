@@ -1,68 +1,40 @@
 import React from 'react';
-
-const styles = {
-  app: {
-    textAlign: 'center',
-  },
-  header: {
-    backgroundColor: '#333',
-    color: 'white',
-    padding: '20px',
-  },
-  main: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  sectionContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    margin: '20px',
-  },
-  section: {
-    flex: '1',
-    margin: '10px',
-    padding: '20px',
-    border: '1px solid #ddd',
-  },
-  footer: {
-    backgroundColor: '#333',
-    color: 'white',
-    padding: '20px',
-    position: 'fixed',
-    bottom: 0,
-    width: '100%',
-  },
-};
+import './styles.css';
+import logo from './logo.png'; // Import your image file
 
 function App() {
   return (
-    <div style={styles.app}>
-      <header style={styles.header}>
-        <h1>Welcome to My Website</h1>
+    <div className="App">
+      <header>
+        <img src={logo} alt="Logo" className="logo" /> {/* Image added here */}
+        <h1>HEllOO there, Welcome to the Memory dump to cheer u up a bit : )</h1>
       </header>
-      <main style={styles.main}>
-        <div style={styles.sectionContainer}>
-          <section style={styles.section}>
-            <h2>Section 1 Title</h2>
-            <p>Section 1 Body</p>
-          </section>
-          <section style={styles.section}>
-            <h2>Section 2 Title</h2>
-            <p>Section 2 Body</p>
-          </section>
+      <main>
+        <div className="section-container">
+          <div className="section">
+            <h2>We Could TAlk </h2>
+            <p>We provide very fun and entertaining conversations.
+
+We have very wise and emotionally intelligent agents, that will gladly and actively listen and can provide GREAT advice if needed.</p>
+          </div>
+          <div className="section">
+            <h2>HANg OUUUT</h2>
+            <p>Cinema, walks ,shopping, sports. We provide a hell lot of activities that would definitely change the mood.(This is our personal favorite)</p>
+          </div>
         </div>
-        <div style={styles.sectionContainer}>
-          <section style={styles.section}>
-            <h2>Section 3 Title</h2>
-            <p>Section 3 Body</p>
-          </section>
-          <section style={styles.section}>
-            <h2>Section 4 Title</h2>
-            <p>Section 4 Body</p>
-          </section>
+        <div className="section-container">
+          <div className="section">
+            <h2>Phone CAaalls</h2>
+            <p>This is our premium instant phone call services.You could call anytime for any period of time you wont, without any additional Feeeees.</p>
+          </div>
+          <div className="section">
+            <h2>Or uuu can just click here ,which i hope helps u a lil bit</h2>
+            <p>Navigating life’s intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey.</p>
+            <button>Click Meeeee</button>
+          </div>
         </div>
       </main>
-      <footer style={styles.footer}>
+      <footer>
         <p>&copy; 2024 My Website</p>
       </footer>
     </div>
