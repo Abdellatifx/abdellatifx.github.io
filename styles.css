@@ -81,3 +81,16 @@ footer {
   color: white;
   padding: 20px;
 }
+
+/* Social icons styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  width: 30px; /* Adjust width to make the icon smaller */
+  height: auto; /* Automatically adjust height */
+  margin: 0 10px; /* Add some margin between icons */
+}
