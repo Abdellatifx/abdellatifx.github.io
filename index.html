@@ -1,43 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memory Dump</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="App">
-    <header>
-      <img src="thumbnail.jpg" alt="Logo" class="logo">
-      <h1>HEllOO there, Welcome to the Memory dump to cheer u up a bit : )</h1>
-    </header>
-    <main>
-      <div class="section-container">
-        <div class="section">
-          <h2>We Could TAlk</h2>
-          <p>We provide very fun and entertaining conversations. We have very wise and emotionally intelligent agents, that will gladly and actively listen and can provide GREAT advice if needed.</p>
+import React from 'react';
+import './styles.css';
+import logo from './thumbnail.jpg'; // Import your image file
+
+function App() {
+  // Function to handle button click event
+  const handleClick = () => {
+    // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint you want to call
+    fetch('YOUR_API_ENDPOINT')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Handle the API response data
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  };
+
+  return (
+    <div className="App">
+      <header>
+        <img src={logo} alt="Logo" className="logo" />
+        <h1>HEllOO there, Welcome to the Memory dump to cheer u up a bit : )</h1>
+      </header>
+      <main>
+        <div className="section-container">
+          <div className="section">
+            <h2>We Could TAlk</h2>
+            <p>We provide very fun and entertaining conversations. We have very wise and emotionally intelligent agents, that will gladly and actively listen and can provide GREAT advice if needed.</p>
+          </div>
+          <div className="section">
+            <h2>HANg OUUUT</h2>
+            <p>Cinema, walks, shopping, sports. We provide a hell lot of activities that would definitely change the mood. (This is our personal favorite)</p>
+          </div>
         </div>
-        <div class="section">
-          <h2>HANg OUUUT</h2>
-          <p>Cinema, walks, shopping, sports. We provide a hell lot of activities that would definitely change the mood. (This is our personal favorite)</p>
+        <div className="section-container">
+          <div className="section">
+            <h2>Phone CAaalls</h2>
+            <p>This is our premium instant phone call services. You could call anytime for any period of time you want, without any additional Feeeees.</p>
+          </div>
+          <div className="section">
+            <h2>Or uuu can just click here, which i hope helps u a lil bit</h2>
+            <p>Navigating life’s intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey.</p>
+            <button onClick={handleClick}>Click Meeeee</button> {/* Call handleClick function when button is clicked */}
+          </div>
         </div>
-      </div>
-      <div class="section-container">
-        <div class="section">
-          <h2>Phone CAaalls</h2>
-          <p>This is our premium instant phone call services. You could call anytime for any period of time you want, without any additional Feeeees.</p>
-        </div>
-        <div class="section">
-          <h2>Or uuu can just click here, which i hope helps u a lil bit</h2>
-          <p>Navigating life’s intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey.</p>
-          <button>Click Meeeee</button>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2024 My Website</p>
-    </footer>
-  </div>
-</body>
-</html>
+      </main>
+      <footer>
+        <p>&copy; 2024 My Website</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
