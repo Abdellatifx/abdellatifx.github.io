@@ -1,13 +1,33 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif; /* Elegant font */
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
+/* Header styles */
 header {
   background-color: #333;
   color: white;
   padding: 20px;
 }
 
+.logo {
+  width: 100px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 24px; /* Larger font size for header */
+  margin: 10px 0; /* Add some margin to top and bottom */
+}
+
+/* Main content styles */
 main {
   display: flex;
   justify-content: center;
@@ -15,22 +35,49 @@ main {
 
 .section-container {
   display: flex;
-  flex-direction: row;
-  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-section {
+.section {
   flex: 1;
-  margin: 10px;
+  margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
+  max-width: 300px;
+  background-color: #fff; /* White background for sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+h2 {
+  font-size: 20px; /* Larger font size for section titles */
+  color: #333; /* Dark gray color for section titles */
+  margin-bottom: 10px; /* Add some margin to bottom of titles */
+}
+
+p {
+  font-size: 16px; /* Font size for paragraph text */
+  color: #666; /* Gray color for paragraph text */
+  line-height: 1.5; /* Add some line height for readability */
+}
+
+button {
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer styles */
 footer {
   background-color: #333;
   color: white;
   padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
