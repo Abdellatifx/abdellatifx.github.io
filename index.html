@@ -1,37 +1,68 @@
 import React from 'react';
-import './App.css'; // Import CSS file for styling
-import './styles.css'; // Import CSS file for styling
 
+const styles = {
+  app: {
+    textAlign: 'center',
+  },
+  header: {
+    backgroundColor: '#333',
+    color: 'white',
+    padding: '20px',
+  },
+  main: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  sectionContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    margin: '20px',
+  },
+  section: {
+    flex: '1',
+    margin: '10px',
+    padding: '20px',
+    border: '1px solid #ddd',
+  },
+  footer: {
+    backgroundColor: '#333',
+    color: 'white',
+    padding: '20px',
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <div style={styles.app}>
+      <header style={styles.header}>
         <h1>Welcome to My Website</h1>
       </header>
-      <main>
-        <div className="section-container">
-          <section>
+      <main style={styles.main}>
+        <div style={styles.sectionContainer}>
+          <section style={styles.section}>
             <h2>Section 1 Title</h2>
             <p>Section 1 Body</p>
           </section>
-          <section>
+          <section style={styles.section}>
             <h2>Section 2 Title</h2>
             <p>Section 2 Body</p>
           </section>
         </div>
-        <div className="section-container">
-          <section>
+        <div style={styles.sectionContainer}>
+          <section style={styles.section}>
             <h2>Section 3 Title</h2>
             <p>Section 3 Body</p>
           </section>
-          <section>
+          <section style={styles.section}>
             <h2>Section 4 Title</h2>
             <p>Section 4 Body</p>
           </section>
         </div>
       </main>
-      <footer>
+      <footer style={styles.footer}>
         <p>&copy; 2024 My Website</p>
       </footer>
     </div>
