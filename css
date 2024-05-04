@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+section {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
