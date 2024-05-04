@@ -1,22 +1,28 @@
 import React from 'react';
 import './styles.css';
 import logo from './thumbnail.jpg'; // Import your image file
-import callApi from './api'; // Import the function from api.js
-<!-- 
+
 function App() {
   // Function to handle button click event
   const handleClick = () => {
-    callApi()
+    // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint you want to call
+    fetch('YOUR_API_ENDPOINT')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         // Handle the API response data
         console.log(data);
       })
       .catch(error => {
         // Handle errors
-        console.error('There was an error calling the API:', error);
+        console.error('There was a problem with the fetch operation:', error);
       });
   };
- -->
+
   return (
     <div className="App">
       <header>
