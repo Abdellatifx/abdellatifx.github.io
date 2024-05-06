@@ -2,6 +2,7 @@ async function fetchImage() {
   const proxyUrl = 'https://api.allorigins.win/get?url='; // AllOrigins proxy URL
   const targetUrl = 'https://saragift-fghlck2qaa-uc.a.run.app/media'; // Your target URL
 
+  
   // Call the API endpoint using the AllOrigins proxy
   await fetch(proxyUrl+targetUrl)
     .then(async response => {
