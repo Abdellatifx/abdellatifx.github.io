@@ -8,6 +8,7 @@ function fetchImage() {
       return response.blob(); // Convert response to a Blob object
     })
     .then(blob => {
+      console.log(blob); // Log the blob data
       // Create an object URL from the Blob
       const objectURL = URL.createObjectURL(blob);
 
