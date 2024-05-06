@@ -1,9 +1,9 @@
 function fetchImage() {
   const proxyUrl = 'https://api.allorigins.win/get?url='; // AllOrigins proxy URL
-  const targetUrl = 'http://127.0.0.1:8080/media'; // Your target URL
+  const targetUrl = 'https://saragift-fghlck2qaa-uc.a.run.app/media'; // Your target URL
 
   // Call the API endpoint using the AllOrigins proxy
-  fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('http://127.0.0.1:8080/media')}`)
+  fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
