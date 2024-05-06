@@ -12,6 +12,9 @@ function fetchImage() {
     })
     .then(data => {
       const blob = data.contents; // Extract blob from JSON response
+      console.log(blob);
+      console.log(blob.type);
+
       const objectURL = URL.createObjectURL(blob);
       const image = document.createElement('img');
       image.src = objectURL;
