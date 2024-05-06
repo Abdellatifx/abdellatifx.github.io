@@ -8,7 +8,7 @@ function fetchImage() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      return response.json(); // Convert response to JSON
+      return response.blob(); // Convert response to JSON
     })
     .then(data => {
       const blob = data.contents; // Extract blob from JSON response
