@@ -1,22 +1,22 @@
 function fetchImage() {
-  fetch('/fetch-image')
+  // Call the API endpoint
+  fetch('http://127.0.0.1:8080/media')
     .then(response => {
-      // Convert response to a Blob object
-      return response.blob();
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.blob(); // Convert response to a Blob object
     })
     .then(blob => {
-      // Create object URL from the Blob
+      console.log(blob); // Log the blob data
+      // Create an object URL from the Blob
       const objectURL = URL.createObjectURL(blob);
-      
-      // Create an image element and set its source to the object URL
-      const image = document.createElement('img');
-      image.src = objectURL;
-      
-      // Append the image to the document body
-      document.body.appendChild(image);
+
+      // Open a new window/tab and set its content to display the image
+      const newWindow = window.open('');
+      newWindow.document.write(`<img src="${objectURL}" alt="Fetched Image">`);
     })
     .catch(error => {
-      // Handle any errors that occur during the fetch operation
       console.error('There was a problem with the fetch operation:', error);
     });
 }
