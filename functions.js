@@ -1,6 +1,8 @@
 function fetchImage() {
-  // Call the API endpoint
-  fetch('http://127.0.0.1:8080/media')
+  // Call the API endpoint with the GET method explicitly specified
+  fetch('http://127.0.0.1:8080/media', {
+    method: 'GET'
+  })
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -14,6 +16,7 @@ function fetchImage() {
 
       // Open a new window/tab and set its content to display the image
       const newWindow = window.open('');
+      // Fix the string interpolation syntax
       newWindow.document.write(`<img src="${objectURL}" alt="Fetched Image">`);
     })
     .catch(error => {
