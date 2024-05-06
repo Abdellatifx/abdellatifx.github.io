@@ -11,12 +11,9 @@ function fetchImage() {
       // Create an object URL from the Blob
       const objectURL = URL.createObjectURL(blob);
 
-      // Create an image element and set its src to the object URL
-      const image = document.createElement('img');
-      image.src = objectURL;
-
-      // Append the image to the document body or a specific element
-      document.body.appendChild(image);
+      // Open a new window/tab and set its content to display the image
+      const newWindow = window.open('');
+      newWindow.document.write(`<img src="${objectURL}" alt="Fetched Image">`);
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
